@@ -24,16 +24,17 @@ const StandUpTable = (props) => {
     let inputWednesday;
     let inputThursday;
     let inputFriday;
+    let weekno;
 
     console.log("props from container")
-    console.log(props.monday)
+    console.log(props)
     console.log("Ends")
 
     return(
         <div>
             <form onSubmit={e=> {
                 e.preventDefault()
-                props.addTask(inputMonday.value,inputTuesday.value,inputWednesday.value,inputThursday.value,inputFriday.value)
+                props.addTask(inputMonday.value,inputTuesday.value,inputWednesday.value,inputThursday.value,inputFriday.value,weekno.value)
             }}>
                 <Table>
                     <thead>
@@ -55,6 +56,9 @@ const StandUpTable = (props) => {
                         </Th>
                         <Th>
                             Friday
+                        </Th>
+                        <Th>
+                            Week number
                         </Th>
                     </tr>
                     </thead>
@@ -88,6 +92,11 @@ const StandUpTable = (props) => {
                                     inputFriday=friday
                                 }} value={props.friday}/>
                             </Td>
+                            <td>
+                                <input ref={wkno=>{
+                                    weekno=wkno
+                                }} value={props.weekno} readOnly/>
+                            </td>
                         </tr>
                     </tbody>
                 </Table>

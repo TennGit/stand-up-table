@@ -9,6 +9,7 @@ const addTask = (state={}, action) => {
     switch (action.type){
         case 'ADD_TASK':
             return {
+                weekno:action.weekno,
                 monday: action.monday,
                 tuesday: action.tuesday,
                 wednesday: action.wednesday,

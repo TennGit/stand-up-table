@@ -13,8 +13,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        gotoprevious: () => {
-            dispatch(gotoprevious())
+        gotopreviousweek: (currentWeek) => {
+            dispatch(gotoprevious(currentWeek))
         }
     }
 }

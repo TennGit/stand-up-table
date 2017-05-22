@@ -4,13 +4,14 @@
 
 import React from 'react'
 const ControlTableGroup = (props) => {
-    console.log("btn group controller")
+    console.log("component")
     console.log(props)
+    let currentWeekNo = props.controlBtnGroup.weekno==undefined?props.addTask.weekno:props.controlBtnGroup.weekno ;
 
     return(
         <div>
-            <button onclick>previous</button>
-            <button onclick>next</button>
+            <button onClick={()=>props.gotopreviousweek(currentWeekNo)}>previous</button>
+            <button >next</button>
         </div>
             )
 }

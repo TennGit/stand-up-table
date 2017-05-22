@@ -13,8 +13,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addTask: (monday,tuesday,wednesday,thursday,friday) => {
-            dispatch(addTask(monday,tuesday,wednesday,thursday,friday))
+        addTask: (monday,tuesday,wednesday,thursday,friday,weekno) => {
+            dispatch(addTask(monday,tuesday,wednesday,thursday,friday,weekno))
         }
     }
 }

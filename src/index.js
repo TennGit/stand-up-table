@@ -6,7 +6,18 @@ import {Provider} from 'react-redux';
 import rootReducer from './reducers';
 import {createStore} from 'redux';
 
-const store = createStore(rootReducer);
+const initialState={
+    addTask: {
+        weekno: 2,
+        monday: '',
+        tuesday: '',
+        wednesday: '',
+        thursday: '',
+        friday: ''
+    }
+}
+
+const store = createStore(rootReducer, initialState);
 
 render(
     <Provider store={store}>

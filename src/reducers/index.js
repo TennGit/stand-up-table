@@ -4,10 +4,12 @@
 
 import {combineReducers} from "redux";
 import addTask from "./addTaskReducer";
+import controlBtnGroup from "./controlBtnGroupReducer"
 
 
 const rootReducer = combineReducers({
     addTask,
+    controlBtnGroup,
 })
 
 export default rootReducer;
