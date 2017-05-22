@@ -5,17 +5,24 @@
 
 import {connect} from "react-redux";
 import StandUpTable from "../components/StandUpTableComponent";
+import addTask from "../actions"
 
 
 const mapStateToProps = (state) => {
     return state
 }
 
-const mapDispatchToProps = () => {return {}}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addTask: (monday,tuesday,wednesday,thursday,friday) => {
+            dispatch(addTask(monday,tuesday,wednesday,thursday,friday))
+        }
+    }
+}
 
-const Container = connect(
+const StandUpTableContainer = connect(
     mapStateToProps,
     mapDispatchToProps
 )(StandUpTable)
 
-export default Container;
+export default StandUpTableContainer;
