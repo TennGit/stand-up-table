@@ -24,7 +24,6 @@ const StandUpTable = (props) => {
     let inputWednesday;
     let inputThursday;
     let inputFriday;
-    let weekno;
 
     console.log("props from container")
     console.log(props)
@@ -34,7 +33,7 @@ const StandUpTable = (props) => {
         <div>
             <form onSubmit={e=> {
                 e.preventDefault()
-                props.addTask(inputMonday.value,inputTuesday.value,inputWednesday.value,inputThursday.value,inputFriday.value,weekno.value)
+                props.addTask(inputMonday.value,inputTuesday.value,inputWednesday.value,inputThursday.value,inputFriday.value)
             }}>
                 <Table>
                     <thead>
@@ -57,9 +56,6 @@ const StandUpTable = (props) => {
                         <Th>
                             Friday
                         </Th>
-                        <Th>
-                            Week number
-                        </Th>
                     </tr>
                     </thead>
                     <tbody>
@@ -70,33 +66,28 @@ const StandUpTable = (props) => {
                             <Td>
                                 <input ref={monday=>{
                                     inputMonday=monday
-                                }} value={props.monday} />
+                                }} />
                             </Td>
                             <Td>
                                 <input ref={tuesday=>{
                                     inputTuesday=tuesday
-                                }} value={props.tuesday}/>
+                                }} />
                             </Td>
                             <Td>
                                 <input ref={wednesday=>{
                                     inputWednesday=wednesday
-                                }} value={props.wednesday}/>
+                                }} />
                             </Td>
                             <Td>
                                 <input ref={thursday=>{
                                     inputThursday=thursday
-                                }} value={props.thursday}/>
+                                }} />
                             </Td>
                             <Td>
                                 <input ref={friday=>{
                                     inputFriday=friday
-                                }} value={props.friday}/>
+                                }} />
                             </Td>
-                            <td>
-                                <input ref={wkno=>{
-                                    weekno=wkno
-                                }} value={props.weekno} readOnly/>
-                            </td>
                         </tr>
                     </tbody>
                 </Table>

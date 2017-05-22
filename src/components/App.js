@@ -6,10 +6,12 @@
 import React from 'react'
 import StandUpTableContainer from '../containers/StandUpTableContainer'
 import ControlTableGroupContainer from '../containers/ControlTableGroupContainer'
+import HeaderWeekNumberContainer from '../containers/HeaderWeekNumberContainer'
 
 
 const App = () => (
     <div>
+        <HeaderWeekNumberContainer />
         <StandUpTableContainer />
         <ControlTableGroupContainer />
     </div>

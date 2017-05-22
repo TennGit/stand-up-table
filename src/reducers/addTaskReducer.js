@@ -2,6 +2,7 @@
  * Created by hengl on 22/05/2017.
  */
 
+
 const addTask = (state={}, action) => {
     console.log("action")
     console.log(action)
@@ -9,7 +10,6 @@ const addTask = (state={}, action) => {
     switch (action.type){
         case 'ADD_TASK':
             return {
-                weekno:action.weekno,
                 monday: action.monday,
                 tuesday: action.tuesday,
                 wednesday: action.wednesday,

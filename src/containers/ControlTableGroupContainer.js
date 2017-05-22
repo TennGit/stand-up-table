@@ -4,17 +4,17 @@
 
 import {connect} from "react-redux";
 import ControlTableGroup from "../components/ControlTableGroupComponent";
-import gotoprevious from "../actions/controlBtnGroup"
+import gotoprevious, {gotonext} from "../actions/controlBtnGroup"
 
-const mapStateToProps = (state) => {
-    console.log(state)
-    return state
-}
+const mapStateToProps = (state) => state
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        gotopreviousweek: (currentWeek) => {
-            dispatch(gotoprevious(currentWeek))
+        gotopreviousweek: () => {
+            dispatch(gotoprevious())
+        },
+        gotonextweek: ()=>{
+            dispatch(gotonext())
         }
     }
 }
