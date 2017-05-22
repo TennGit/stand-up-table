@@ -5,11 +5,13 @@
 
 import React from 'react'
 import StandUpTableContainer from '../containers/StandUpTableContainer'
+import ControlTableGroupContainer from '../containers/ControlTableGroupContainer'
 
 
 const App = () => (
     <div>
         <StandUpTableContainer />
+        <ControlTableGroupContainer />
     </div>
 )
 

@@ -2,14 +2,13 @@
  * Created by hengl on 22/05/2017.
  */
 
-
 import {connect} from "react-redux";
 import StandUpTable from "../components/StandUpTableComponent";
 import addTask from "../actions"
 
 
 const mapStateToProps = (state) => {
-    return state
+    return state.addTask
 }
 
 const mapDispatchToProps = (dispatch) => {

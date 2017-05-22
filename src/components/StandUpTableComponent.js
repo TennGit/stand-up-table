@@ -26,7 +26,7 @@ const StandUpTable = (props) => {
     let inputFriday;
 
     console.log("props from container")
-    console.log(props)
+    console.log(props.monday)
     console.log("Ends")
 
     return(
@@ -66,27 +66,27 @@ const StandUpTable = (props) => {
                             <Td>
                                 <input ref={monday=>{
                                     inputMonday=monday
-                                }} />
+                                }} value={props.monday} />
                             </Td>
                             <Td>
                                 <input ref={tuesday=>{
                                     inputTuesday=tuesday
-                                }} />
+                                }} value={props.tuesday}/>
                             </Td>
                             <Td>
                                 <input ref={wednesday=>{
                                     inputWednesday=wednesday
-                                }} />
+                                }} value={props.wednesday}/>
                             </Td>
                             <Td>
                                 <input ref={thursday=>{
                                     inputThursday=thursday
-                                }} />
+                                }} value={props.thursday}/>
                             </Td>
                             <Td>
                                 <input ref={friday=>{
                                     inputFriday=friday
-                                }} />
+                                }} value={props.friday}/>
                             </Td>
                         </tr>
                     </tbody>
