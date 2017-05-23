@@ -22,15 +22,17 @@ const Ir = styled.i`
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 `
-
-
+const Div=styled.div`
+    display:overflow
+`
 
 const ControlTableGroup = (props) => {
+
     return(
-        <div>
+        <Div>
             <button onClick={()=>props.gotopreviousweek()}><Il />previous</button>
             <button onClick={()=>props.gotonextweek()}>next<Ir /></button>
-        </div>
+        </Div>
             )
 }
 

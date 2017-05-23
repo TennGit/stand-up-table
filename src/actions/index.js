@@ -1,6 +1,4 @@
-export default function addTask(monday, tuesday, wednesday, thursday, friday, weekno){
-    console.log("Action creator")
-    console.log(weekno)
+export default function addTask(monday, tuesday, wednesday, thursday, friday){
     return{
         type: "ADD_TASK",
         monday,
@@ -8,6 +6,5 @@ export default function addTask(monday, tuesday, wednesday, thursday, friday, we
         wednesday,
         thursday,
         friday,
-        weekno
     }
 }

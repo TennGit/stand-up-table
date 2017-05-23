@@ -8,7 +8,7 @@ import addTask from "../actions"
 
 
 const mapStateToProps = (state) => {
-    return state.addTask
+    return state.addTask.length>0?state.addTask:state
 }
 
 const mapDispatchToProps = (dispatch) => {
