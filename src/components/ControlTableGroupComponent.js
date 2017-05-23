@@ -26,14 +26,11 @@ const Div=styled.div`
     display:overflow
 `
 
-const ControlTableGroup = (props) => {
-
-    return(
-        <Div>
-            <button onClick={()=>props.gotopreviousweek()}><Il />previous</button>
-            <button onClick={()=>props.gotonextweek()}>next<Ir /></button>
-        </Div>
-            )
-}
+const ControlTableGroup = (props) => (
+    <Div>
+        <button onClick={()=>props.gotopreviousweek()}><Il />previous</button>
+        <button onClick={()=>props.gotonextweek()}>next<Ir /></button>
+    </Div>
+)
 
 export default ControlTableGroup

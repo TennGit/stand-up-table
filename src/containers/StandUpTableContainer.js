@@ -4,17 +4,17 @@
 
 import {connect} from "react-redux";
 import StandUpTable from "../components/StandUpTableComponent";
-import addTask from "../actions"
+import addToTask from "../actions"
 
 
 const mapStateToProps = (state) => {
-    return state.addTask.length>0?state.addTask:state
+    return state
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addTask: (monday,tuesday,wednesday,thursday,friday) => {
-            dispatch(addTask(monday,tuesday,wednesday,thursday,friday))
+        addToTask: (weekno,monday,tuesday,wednesday,thursday,friday) => {
+            dispatch(addToTask(weekno,monday,tuesday,wednesday,thursday,friday))
         }
     }
 }

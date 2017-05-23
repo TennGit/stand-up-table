@@ -3,12 +3,11 @@
  */
 
 import {combineReducers} from "redux";
-import addTask from "./addTaskReducer";
+import allTasks from "./addTaskReducer";
 import controlBtnGroup from "./controlBtnGroupReducer"
 
-
 const rootReducer = combineReducers({
-    addTask,
+    allTasks,
     controlBtnGroup,
 })
 

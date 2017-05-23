@@ -4,7 +4,7 @@
 
 const addSingleWeekTask = (state={}, action) =>{
     return {
-        weekno: state.weekno,
+        weekno: action.weekno,
         monday: action.monday,
         tuesday: action.tuesday,
         wednesday: action.wednesday,
@@ -14,15 +14,17 @@ const addSingleWeekTask = (state={}, action) =>{
 }
 
 
-const addTask = (state=[], action) => {
+const addToTask = (state=[], action) => {
+    console.log(`wwwww `)
+    console.log(action)
     switch (action.type){
         case 'ADD_TASK':
-            return [
-                ...state,
-                addSingleWeekTask(state, action),
-            ]
-        default: return state
+            console.log("whaaaaaaaaaa")
+            const array = [...state, addSingleWeekTask(state, action)];
+            console.log(array)
+            return array
+        default:return state
     }
 }
 
-export default addTask
+export default addToTask

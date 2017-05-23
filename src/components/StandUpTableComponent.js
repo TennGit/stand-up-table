@@ -25,7 +25,10 @@ const StandUpTable = (props) => {
     let inputThursday;
     let inputFriday;
 
+    const weekno = props.controlBtnGroup.weekno;
+
     console.log("props from container")
+    console.log(`weekno ${props.controlBtnGroup.weekno}`)
     console.log(props)
     console.log("Ends")
 
@@ -33,7 +36,7 @@ const StandUpTable = (props) => {
         <div>
             <form onSubmit={e=> {
                 e.preventDefault()
-                props.addTask(inputMonday.value,inputTuesday.value,inputWednesday.value,inputThursday.value,inputFriday.value)
+                props.addToTask(weekno, inputMonday.value,inputTuesday.value,inputWednesday.value,inputThursday.value,inputFriday.value)
             }}>
                 <Table>
                     <thead>
